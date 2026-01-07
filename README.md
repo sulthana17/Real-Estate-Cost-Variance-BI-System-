@@ -1,11 +1,22 @@
 # Real Estate Cost Variance BI System
 
-![Python](https://img.shields.io/badge/Python-Data%20Generation-blue)
-![SQL](https://img.shields.io/badge/SQL-Analytics-orange)
-![Power%20BI](https://img.shields.io/badge/Power%20BI-Dashboard-yellow)
+![Python](https://img.shields.io/badge/Python-Data%20Generation-gold)
+![SQL](https://img.shields.io/badge/SQL-Analytics-gold)
+![Power%20BI](https://img.shields.io/badge/Power%20BI-Dashboard-gold)
 ![Status](https://img.shields.io/badge/Status-Completed-success)
 
 An end-to-end **Business Intelligence system** built to analyze, monitor, and explain **cost variance across real estate projects**, using a realistic finance and governance lens.
+
+---
+
+## Project Presentation
+
+A full analytics deck explaining **system design, methodology, and insights** is available here:
+
+**📊 Analytics Deck:**  
+[Real Estate Cost Variance – Analytics System](Deck/Real-Estate-Cost-Variance-Analytics-System.pdf)
+
+> This deck is intended to complement the dashboard by explaining *what was built, how it was built, and what the insights mean for decision-making*.
 
 ---
 
@@ -123,16 +134,6 @@ The dashboard is structured into three analytical layers:
 
 ---
 
-## Project Presentation
-
-A full analytics deck explaining **system design, methodology, and insights** is available here:
-
-**📊 Analytics Deck:**  
-[Real Estate Cost Variance – Analytics System](./deck/Real-Estate-Cost-Variance-Analytics-System.pdf)
-
-> This deck is intended to complement the dashboard by explaining *what was built, how it was built, and what the insights mean for decision-making*.
-
----
 
 ## Repository Structure
 
