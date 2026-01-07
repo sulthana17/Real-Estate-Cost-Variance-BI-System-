@@ -134,6 +134,15 @@ The dashboard is structured into three analytical layers:
 
 ---
 
+## .Project Outcome
+
+- This repository demonstrates:
+- End-to-end BI system design
+- Strong understanding of cost variance and governance
+- Ability to move from data → analysis → decision support
+- Practical application of finance-focused analytics
+
+----
 
 ## Repository Structure
 
@@ -145,12 +154,4 @@ The dashboard is structured into three analytical layers:
 ├── docs/          # ER diagrams 
 └── README.md
 
----
 
-## .Project Outcome
-
-- This repository demonstrates:
-- End-to-end BI system design
-- Strong understanding of cost variance and governance
-- Ability to move from data → analysis → decision support
-- Practical application of finance-focused analytics
