@@ -1,194 +1,155 @@
 # Real Estate Cost Variance BI System
 
-An end-to-end Business Intelligence system designed to analyze, monitor, and explain cost variance across real estate projects.
+![Python](https://img.shields.io/badge/Python-Data%20Generation-blue)
+![SQL](https://img.shields.io/badge/SQL-Analytics-orange)
+![Power%20BI](https://img.shields.io/badge/Power%20BI-Dashboard-yellow)
+![Status](https://img.shields.io/badge/Status-Completed-success)
 
-This project simulates a real-world finance + analytics workflow — from synthetic data generation to SQL-based modeling and executive-level dashboards.
-
-> Note: All data used in this project is synthetically generated using Python to replicate realistic real estate cost, timeline, and variance scenarios. No real company data is used.
-
-
-
+An end-to-end **Business Intelligence system** built to analyze, monitor, and explain **cost variance across real estate projects**, using a realistic finance and governance lens.
 
 ---
 
-Problem Statement
+## Overview
+
+This project simulates a **real-world enterprise analytics workflow**:
+
+- Synthetic data generation using Python  
+- Star-schema modeling and analytics in SQL  
+- Executive dashboards in Power BI  
+- Insight storytelling through an analytics deck  
+
+The focus is not just reporting, but **decision support and cost governance**.
+
+---
+
+## Data Disclaimer
+
+> All data used in this project is **synthetically generated using Python** to replicate realistic business scenarios.  
+> No real company, client, or confidential data is used.
+
+---
+
+## Problem Statement
 
 Real estate organizations often struggle to:
 
-Monitor budget vs actual cost deviations at scale
+- Track **budget vs actual** cost deviations at scale  
+- Identify **controllable vs uncontrollable** overruns  
+- Apply **cost governance policies** consistently  
+- Convert variance numbers into **clear management actions**
 
-Distinguish controllable vs uncontrollable cost overruns
-
-Enforce cost governance policies consistently
-
-Translate variance numbers into actionable decisions
-
-
-This system was built to address those gaps through a structured, analytics-first approach.
-
+This system was designed to close those gaps using an **analytics-first approach**.
 
 ---
 
-System Architecture
+## System Architecture
 
-Python → SQL Server → Power BI → Executive Decision Support
+**Python → SQL Server → Power BI → Decision Support**
 
-1. Python
-
-Generated realistic project, cost, and time data
-
-Embedded business rules for delays, overruns, and policy breaches
-
-Split data into clean dimension and fact structures
-
-
-
-2. SQL Server
-
-Star schema with enforced grain
-(Project × Month × Phase × Department × Cost Type)
-
-Variance calculated once in SQL (single source of truth)
-
-Referential integrity, validation checks, and indexing
-
-BI-facing analytical views created for reporting
-
-
-
-3. Power BI
-
-Executive cost variance overview
-
-Project-level deep-dive analysis
-
-Variance governance and intervention layer
-
-
-
-4. Analytics Framework
-
-Descriptive: What happened?
-
-Diagnostic: Why did it happen?
-
-Prescriptive: What action should be taken?
-
-
-
-
+| Layer | Description |
+|-----|-------------|
+| Python | Synthetic data generation & business rule simulation |
+| SQL Server | Data modeling, variance logic, validation, indexing |
+| Power BI | Executive dashboards & analytical views |
+| Presentation | Insight communication & storytelling |
 
 ---
 
-Data Model Overview
+## Data Generation (Python)
 
-Dimensions
-
-Dim_Project
-
-Dim_Time
-
-Dim_Region
-
-Dim_Client
-
-Dim_Manager
-
-Dim_Phase
-
-Dim_Department (with controllable vs uncontrollable flag)
-
-Dim_CostType
-
-
-Facts
-
-Fact_Budget
-
-Fact_Actual
-
-Fact_Variance (derived in SQL)
-
-
-All joins are key-based (no string joins), and grain is strictly enforced to avoid aggregation errors.
-
+- Generated realistic datasets for:
+  - Projects, phases, departments, regions, managers
+  - Budgeted and actual costs
+- Simulated:
+  - Cost overruns and savings
+  - Project delays
+  - Policy breach scenarios
+  - Controllable vs uncontrollable cost behavior
+- Ensured repeatability and scalability of the dataset
 
 ---
 
-Key Business Insights
+## Data Modeling & Analytics (SQL)
 
-13 projects showed unfavorable cost variance
-
-Only 2 projects breached company policy thresholds
-
-67% of unfavorable variance was controllable, indicating opportunity for intervention
-
-Small projects showed disproportionately higher overruns
-
-Q3 was the highest-risk period, driven mainly by Labor and Logistics costs
-
-
+- Designed a **star schema** with fact and dimension tables
+- Implemented:
+  - Cost variance calculations
+  - Policy breach logic
+  - Sanity and integrity checks
+  - Indexing for performance
+- Created SQL views optimized for BI consumption
 
 ---
 
-Tools & Technologies Used
+## Business Intelligence (Power BI)
 
-Python – Data generation, validation, and preprocessing
+The dashboard is structured into three analytical layers:
 
-SQL Server (T-SQL) – Data modeling, variance logic, views, and performance tuning
+### 1. Executive Cost Variance Overview
+- Portfolio-level cost health
+- Net variance and variance %
+- Regional and departmental risk visibility
 
-Power BI – Interactive dashboards and executive reporting
+### 2. Project Deep Dive
+- Phase-wise and department-wise variance drivers
+- Project size and timeline impact analysis
+- Identification of controllable cost issues
 
-
-ChatGPT – Used as a reasoning assistant for logic validation and analytical framing
-(final design, modeling, and decisions were user-driven)
-
-
-
----
-
-Repository Structure
-
-├── python/
-│   └── data generation, validation, and splitter scripts
-├── sql/
-│   └── schema, views, variance logic, indexing
-├── power-bi/
-│   └── Power BI report (.pbix)
-├── deck/
-│   └── Executive presentation (Gamma / PDF)
-
+### 3. Variance Control & Intervention
+- Policy breach detection
+- Controllable vs uncontrollable split
+- Action prioritization for management
 
 ---
 
-Presentation Deck
+## Analytics Approach
 
-📊 Executive Analytics Deck:
-
-
-
----
-
-Outcome
-
-This project demonstrates:
-
-Business-first analytics thinking
-
-End-to-end BI system design
-
-Strong SQL and data modeling fundamentals
-
-Ability to translate variance into governance and decision support
-
-
-It reflects how cost variance analysis is built, validated, and explained in real organizations — not just visualized.
-
+| Type | Question Answered |
+|----|------------------|
+| Descriptive | What happened? |
+| Diagnostic | Why did it happen? |
+| Prescriptive | What should be done next? |
 
 ---
 
-Author
+## Key Findings
 
-Rasvi
-Aspiring Data Analyst | Business Intelligence
-Focus: Finance Analytics, Cost Control, Data Modeling
+- 13 projects recorded unfavorable variance  
+- Only 2 projects breached company cost policy thresholds  
+- ~67% of unfavorable variance was **controllable**  
+- Smaller projects showed higher relative cost risk  
+- Q3 emerged as the highest risk period, driven by labor and logistics  
+- Persistent favorable variance in some departments suggests estimation or quality risks  
+
+---
+
+## Project Presentation
+
+A full analytics deck explaining **system design, methodology, and insights** is available here:
+
+**📊 Analytics Deck:**  
+[Real Estate Cost Variance – Analytics System](./deck/Real-Estate-Cost-Variance-Analytics-System.pdf)
+
+> This deck is intended to complement the dashboard by explaining *what was built, how it was built, and what the insights mean for decision-making*.
+
+---
+
+## Repository Structure
+
+```text
+├── python/        # Data generation scripts
+├── sql/           # Schema, views, validation, variance logic
+├── power-bi/      # Power BI report (.pbix)
+├── deck/          # Analytics presentation (PDF)
+├── docs/          # ER diagrams 
+└── README.md
+
+---
+
+## .Project Outcome
+
+- This repository demonstrates:
+- End-to-end BI system design
+- Strong understanding of cost variance and governance
+- Ability to move from data → analysis → decision support
+- Practical application of finance-focused analytics
